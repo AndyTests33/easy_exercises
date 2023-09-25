@@ -5,7 +5,7 @@ Exercise: Python Exception Handling Challenge (id=101)
 * To just try your function witout running the tests, uncomment your function from the "if __name__ = '__main__':" block.
 
 
-Requirement:
+Requirements:
 
 Write a Python function divide_numbers(num1, num2) that performs division on two integers and handles exceptions gracefully.
 Your function should adhere to the following requirements:
@@ -53,7 +53,8 @@ import unittest
 def divide_numbers(num1, num2):
 
     try:
-        if type(num1) != int or type(num2) != int:
+        #if type(num1) != int or type(num2) != int:
+        if not isinstance(num1, int) or not isinstance(num2, int):
             raise ValueError("Invalid input. Please enter integers.")
         if num2 == 0:
             raise ZeroDivisionError("Division by zero is not allowed.")
