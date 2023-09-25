@@ -53,7 +53,6 @@ import unittest
 def divide_numbers(num1, num2):
 
     try:
-        #if type(num1) != int or type(num2) != int:
         if not isinstance(num1, int) or not isinstance(num2, int):
             raise ValueError("Invalid input. Please enter integers.")
         if num2 == 0:
